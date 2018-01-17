@@ -23,6 +23,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        //$serviceFirst = \App::make('service.first');
+        $serviceFirst = resolve('service.first');
+        dd($serviceFirst);
+        //return view('home');
     }
 }
